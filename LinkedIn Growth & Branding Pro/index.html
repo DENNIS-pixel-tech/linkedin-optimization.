@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Growth & Branding Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <header class="fade-in">
+        <h1>🚀 LinkedIn Growth & Branding Pro</h1>
+        <p>Optimize your LinkedIn profile and attract more opportunities!</p>
+        <img src="images/linkedin logo.webp" alt="LinkedIn Growth & Branding Pro Logo" class="logo">
+
+    </header>
+    
+    <section id="about" class="slide-in">
+        <h2>Who Is This For?</h2>
+        <ul>
+            <li>Freelancers looking to attract high-paying clients.</li>
+            <li>Job seekers who want recruiters to find them easily.</li>
+            <li>Entrepreneurs & business owners building their personal brand.</li>
+            <li>Tech professionals (developers, cybersecurity experts, etc.).</li>
+        </ul>
+    </section>
+    
+    <section id="services" class="slide-in">
+        <h2>What’s Included?</h2>
+        <ul>
+            <li>✅ Professionally written LinkedIn headline & summary</li>
+            <li>✅ Keyword optimization for better visibility</li>
+            <li>✅ Custom LinkedIn banner & profile branding</li>
+            <li>✅ AI-powered assistant for instant profile analysis</li>
+        </ul>
+    </section>
+    
+    <section id="pricing" class="slide-in">
+        <h2>Pricing Plans</h2>
+        <ul>
+            <li>🎟 Basic Plan - $20</li>
+            <li>🚀 Pro Plan - $40</li>
+            <li>🔥 Premium Plan - $100</li>
+        </ul>
+    </section>
+    
+    <section id="contact" class="fade-in">
+        <h2>Get Started Today!</h2>
+        <p>📩 Contact us at <strong>[elses882@gmail.com]</strong> or visit <strong>[Your Website]</strong></p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Get a Free Profile Audit</button>
+        </form>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="form-message"></p>
+        </section>        
+        <section id="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p>"This service transformed my LinkedIn profile! I started getting more client inquiries within a week."</p>
+                    <h4>- Alex Johnson, Freelancer</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"I landed my dream job thanks to their profile optimization. Highly recommend!"</p>
+                    <h4>- Sarah Williams, Job Seeker</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Amazing personal branding service! My LinkedIn engagement skyrocketed!"</p>
+                    <h4>- James Carter, Entrepreneur</h4>
+                </div>
+            </div>
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3 class="faq-question">How long does profile optimization take? ⌛</h3>
+                    <p class="faq-answer">It usually takes 2-3 business days for a full LinkedIn profile optimization.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you offer refunds? 💰</h3>
+                    <p class="faq-answer">Yes! If you're not satisfied within 7 days, we offer a full refund.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How do I get started? 🚀</h3>
+                    <p class="faq-answer">Just fill out the contact form below or email us to book your free profile audit!</p>
+                </div>            
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                gsap.from(".fade-in", { opacity: 0, duration: 1.5, y: -50, ease: "power2.out", stagger: 0.3 });
+                gsap.from(".slide-in", { opacity: 0, x: -50, duration: 1.5, ease: "power2.out", stagger: 0.3 });
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+    const testimonials = document.querySelectorAll(".testimonial");
+    
+    testimonials.forEach((testimonial, index) => {
+        setTimeout(() => {
+            testimonial.style.opacity = "1";
+            testimonial.style.transform = "translateY(0)";
+        }, index * 300); // Delays each one slightly
+    });
+});document.querySelectorAll(".faq-question").forEach((question) => {
+    question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+    });
+});
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent actual submission
+    document.getElementById("form-message").innerText = "✅ Message sent! We'll get back to you soon.";
+});
+            </script>
+</body>
+</html>
